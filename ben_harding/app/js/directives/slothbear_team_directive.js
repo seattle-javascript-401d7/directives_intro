@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.directive('team', function() {
+  app.directive('slothbearTeam', function() {
     return {
       restrict: 'EAC',
       replace: true,

@@ -1,4 +1,4 @@
 module.exports = function(app) {
-  require('./player_directive')(app);
-  require('./team_directive')(app);
+  require('./slothbear_player_directive')(app);
+  require('./slothbear_team_directive')(app);
 };

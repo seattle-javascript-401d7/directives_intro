@@ -1,11 +1,11 @@
 module.exports = function(app) {
-  app.directive('player', function() {
+  app.directive('slothbearPlayer', function() {
     return {
       restrict: 'EAC',
       templateUrl: 'templates/player.html',
-      require: '^team',
+      require: '^slothbearTeam',
       scope: {
-        task: '='
+        player: '='
       },
       link: function(scope, element, attrs, controller) {
         scope.firePlayer = controller.firePlayer;
