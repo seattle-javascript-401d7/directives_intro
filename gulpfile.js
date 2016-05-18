@@ -3,7 +3,7 @@ const webpack = require('webpack-stream');
 const html = require('html-loader');
 const eslint = require('gulp-eslint');
 
-const scripts = ['server.js', 'gulpfile.js', 'app/**/*.js'];
+const scripts = ['server.js', 'gulpfile.js', 'app/**/*.js', 'app/**/*.css'];
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
@@ -46,7 +46,7 @@ gulp.task('static:dev', () => {
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('css:dev;', () => {
+gulp.task('css:dev', () => {
   return gulp.src('app/**/*.css')
   .pipe(gulp.dest('./build'));
 });

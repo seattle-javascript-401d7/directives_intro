@@ -1,9 +1,11 @@
 html {
   background-color: green;
 }
+
 body {
   min-width: 720px;
 }
+
 h1 {
   color: blue;
   text-align: center;
@@ -22,4 +24,4 @@ button {
 ul {
   list-style: none;
   background-color: pink;
-}
+};
