@@ -5,17 +5,6 @@ const eslint = require('gulp-eslint');
 
 const scripts = ['server.js', 'gulpfile.js', 'app/**/*.js', 'app/**/*.css'];
 
-gulp.task('webpack:dev', () => {
-  gulp.src('app/js/entry.js')
-  .pipe(webpack({
-    devtool: 'source-map',
-    output: {
-      filename: 'bundle.js'
-    }
-  }))
-  .pipe(gulp.dest('./build'));
-});
-
 gulp.task('lint', () => {
   return gulp.src(scripts)
   .pipe(eslint())
