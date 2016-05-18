@@ -1,0 +1,24 @@
+{
+  "name": "timforman",
+  "version": "0.0.1",
+  "description": "angular_to_do_app",
+  "main": "entry.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "timforman <timothywforman@gmail.com> (https://salty-brook-43242.herokuapp.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "1.5.5",
+    "gulp": "3.9.1",
+    "html-loader": "0.4.3",
+    "webpack-stream": "3.2.0"
+  },
+  "dependencies": {
+    "express": "4.13.4"
+  }
+}
