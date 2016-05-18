@@ -17,5 +17,8 @@
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
