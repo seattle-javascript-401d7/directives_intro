@@ -13,9 +13,6 @@ module.exports = function(app) {
         this.deleteCookie = function(cookie) {
           $scope.cookies.splice($scope.cookies.indexOf(cookie), 1);
         };
-        // this.bakeCookie: function(cookie) {
-        //   // check box?
-        // }
       }
     };
   });
