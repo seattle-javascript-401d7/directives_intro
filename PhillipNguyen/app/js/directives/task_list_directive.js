@@ -11,8 +11,8 @@ module.exports = function(app) {
       controller: function($scope) {
         this.completeTask = function(task) {
           $scope.tasks.splice($scope.tasks.indexOf(task), 1);
-        }
+        };
       }
-    }
+    };
   });
 };
