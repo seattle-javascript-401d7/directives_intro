@@ -1,0 +1,22 @@
+
+module.exports = function(app) {
+  app.directive('cookieList', function() {
+    return {
+      restrict: 'EAC',
+      replace: true,
+      templateUrl: 'templates/cookie_list.html',
+      scope: {
+        cookies: '=',
+        cookieTitle: '@'
+      },
+      controller: function($scope) {
+        this.deleteCookie = function(cookie) {
+          $scope.cookies.splice($scope.cookies.indexOf(cookie), 1);
+        };
+        // this.bakeCookie: function(cookie) {
+        //   // check box?
+        // }
+      }
+    };
+  });
+};
