@@ -12,6 +12,10 @@ module.exports = function(app) {
         this.completeTask = function(task) {
           $scope.tasks.splice($scope.tasks.indexOf(task), 1);
         };
+        this.addTask = function(task) {
+          var taskObj = { desc: task };
+          $scope.tasks.push(taskObj);
+        };
       }
     };
   });
