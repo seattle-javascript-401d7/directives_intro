@@ -5,11 +5,10 @@ require('./directives')(todoApp);
 
 todoApp.run(['$rootScope', function($rs) {
   $rs.todos = [
-    { desc: 'Make this damn button work'},
-    { desc: 'Finish this assignment' },
-    { desc: 'Get some sleep'},
-    { desc: 'Wake up too early and feed the cat'},
-    { desc: 'Make coffee' }
-
+    { desc: 'task 1'},
+    { desc: 'task 2' },
+    { desc: 'task 3'},
+    { desc: 'task 4'},
+    { desc: 'task 5' }
   ];
 }]);
