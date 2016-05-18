@@ -5,12 +5,12 @@ module.exports = function(app) {
       replace: true,
       templateUrl: 'templates/make_list.html',
       scope: {
-        make: '=',
+        makes: '=',
         listTitle: '@'
       },
       controller: function($scope) {
         this.completeMake = function(make) {
-          $scope.make.splice($scope.make.indexOf(make), 1);
+          $scope.makes.splice($scope.makes.indexOf(make), 1);
         }
       }
     }

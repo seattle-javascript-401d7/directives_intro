@@ -1,5 +1,5 @@
 Angular Directives that communicate with each other
-This app displays two Angular directives working together to allow you to mark tasks done
+This app displays two Angular directives working together to allow you to change a list.
 
 How to Run
 
@@ -23,10 +23,5 @@ How to use
 In your browser, navigate to
 
 http://localhost:5050
-Click on the "Bam! Finished!" button to mark one of the three assignments as finished.
 
-Author
-
-Written by Greg Magdsick based off of the work of Tyler Morgan for CodeFellows
-
-License
+click the button and hope something happens
