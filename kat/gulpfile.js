@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
 const eslint = require('gulp-eslint');
-const html = require('html-loader');
 
 var serverFiles = ['gulpfile.js', 'server.js'];
 var clientFiles = ['./app**/*.js'];
