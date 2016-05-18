@@ -46,7 +46,6 @@ gulp.task('static:dev', () => {
   .pipe(gulp.dest('./build'));
 });
 
-
 gulp.task('css:dev;', () => {
   return gulp.src('app/**/*.css')
   .pipe(gulp.dest('./build'));
