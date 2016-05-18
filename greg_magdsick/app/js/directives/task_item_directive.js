@@ -1,9 +1,9 @@
 module.exports = exports = function(app) {
-  app.directive('taskItem', function() {
+  app.directive('gmTaskItem', function() {
     return {
       restrict: 'EAC',
       templateUrl: 'templates/task_item.html',
-      require: '^taskList',
+      require: '^gmTaskList',
       scope: {
         task: '='
       },

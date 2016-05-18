@@ -1,5 +1,5 @@
 module.exports = exports = function(app) {
-  app.directive('taskList', function() {
+  app.directive('gmTaskList', function() {
     return {
       restrict: 'EAC',
       replace: true,
