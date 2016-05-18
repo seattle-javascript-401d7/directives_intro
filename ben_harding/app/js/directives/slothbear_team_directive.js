@@ -9,8 +9,16 @@ module.exports = function(app) {
         teamName: '@'
       },
       controller: function($scope) {
+        var newPlayer = {};
         this.firePlayer = function(player) {
           $scope.players.splice($scope.players.indexOf(player), 1);
+        };
+      },
+      link: function(scope, element, attrs, controller) {
+        scope.createPlayer = function(newPlayer) {
+          if (newPlayer.name && newPlayer.position) {
+            scope.players.push(newPlayer);
+          }
         };
       }
     };
