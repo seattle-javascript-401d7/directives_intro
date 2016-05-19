@@ -1,15 +1,15 @@
 module.exports = function(app) {
-  app.directive('taskItem', function() {
+  app.directive('addToDo', function() {
     return {
       restrict: 'EAC',
-      templateUrl: 'templates/task_item.html',
-      transclude: true,
+      templateUrl: 'templates/add_todo.html',
       require: '^taskList',
       scope: {
         task: '='
       },
       link: function(scope, element, attrs, controller) {
-        scope.done = controller.completeTask;
+        scope.task = {};
+        scope.addtask = controller.addTask;
       }
     };
   });

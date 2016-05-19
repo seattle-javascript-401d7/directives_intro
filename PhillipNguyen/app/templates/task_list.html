@@ -1,7 +1,9 @@
 <section>
   <h1>{{listTitle}}</h1>
-
+  <add-to-do data-task="task"></add-to-do>
   <ul>
-    <task-item data-ng-repeat="task in tasks" data-task="task"></task-item>
+    <task-item data-ng-repeat="task in tasks" data-task="task">
+      <ng-transclude></ng-transclude>
+    </task-item>
   </ul>
 </section>

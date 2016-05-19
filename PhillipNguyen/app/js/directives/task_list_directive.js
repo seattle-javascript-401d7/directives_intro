@@ -3,6 +3,7 @@ module.exports = function(app) {
     return {
       restrict: 'EAC',
       replace: true,
+      transclude: true,
       templateUrl: 'templates/task_list.html',
       scope: {
         tasks: '=',
@@ -11,6 +12,10 @@ module.exports = function(app) {
       controller: function($scope) {
         this.completeTask = function(task) {
           $scope.tasks.splice($scope.tasks.indexOf(task), 1);
+        };
+        this.addTask = function(task) {
+          $scope.tasks.push(task);
+          $scope.task = {};
         };
       }
     };
