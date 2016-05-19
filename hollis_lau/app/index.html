@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My ToDo List</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-ng-app="todoApp">
+  <main data-ng-controller="TasksCtrl as tasksctrl">
+    <task-list
+      data-list-title="My To-Do List"
+      data-tasks="tasksctrl.tasks">
+    </task-list>
+  </main>
+  <script src="js/bundle.js"></script>
+</body>
+</html>
