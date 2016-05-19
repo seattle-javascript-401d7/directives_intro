@@ -1,6 +1,8 @@
 <section>
   <h2>{{listTitle}}</h2>
     <ul>
-      <gm-task-item data-ng-repeat="task in tasks" data-task="task"></gm-task-item>
+      <gm-task-item data-ng-repeat="task in tasks" data-task="task">
+        <ng-transclude></ng-transclude>
+      </gm-task-item>
     </ul>
 </section>
