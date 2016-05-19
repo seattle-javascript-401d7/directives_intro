@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body data-ng-app="shoppingApp">
+    <main data-ng-controller="ListController as listCtrl">
+      <shopping-list
+      data-list-date="May 18th 2016"
+      data-items="listCtrl.items">
+      <h2>Shopping List</h2>
+    </shopping-list>
+      <a href="http://www.foodnetwork.com/recipes.html">Recipe Ideas</a>
+    </main>
+
+      <div shopping-list
+        data-list-date="Ann Beame's Mushroom Sauce"
+        data-items="[{ name: 'Chop onions' },
+      { name: 'add onions to oil and cook on medium heat' },
+      { name: 'add a chunk of butter to pan' },
+      { name: 'add sliced mushrooms and cook until browned' },
+      { name: 'add chicken broth, dry sherry and dry dill to pan' },
+      { name: 'bring to a boil then lower to simmer' },
+      { name: 'add a cup of half and half' },
+      { name: 'simmer and stir' },
+      { name: 'salt and pepper to taste' },
+      { name: 'take off stove and stir in a dollop of sour creme' },
+      { name: 'Eat and enjoy mushroom sauce!' },
+      ]">
+      <h2>Recipes</h2>
+      </div>
+  <script src="bundle.js"></script>
+  </body>
+</html>
