@@ -4,8 +4,18 @@ body {
   max-width: 1040px;
   font-family: "Helvetica", Serif;
   font-size: 1.3em;
-  background: -webkit-linear-gradient(45deg, rgba(125,185,232,1) 1%,rgba(125,185,232,0.38) 61%,rgba(30,87,153,0.31) 68%,rgba(30,87,153,0.27) 72%,rgba(30,87,153,0) 97%);
-  background: linear-gradient(45deg, rgba(125,185,232,1) 1%,rgba(125,185,232,0.38) 61%,rgba(30,87,153,0.31) 68%,rgba(30,87,153,0.27) 72%,rgba(30,87,153,0) 97%);
+  background: -webkit-linear-gradient(45deg,
+    rgba(125,185,232,1) 1%,
+    rgba(125,185,232,0.38) 61%,
+    rgba(30,87,153,0.31) 68%,
+    rgba(30,87,153,0.27) 72%,
+    rgba(30,87,153,0) 97%);
+  background: linear-gradient(45deg,
+    rgba(125,185,232,1) 1%,
+    rgba(125,185,232,0.38) 61%,
+    rgba(30,87,153,0.31) 68%,
+    rgba(30,87,153,0.27) 72%,
+    rgba(30,87,153,0) 97%);
 }
 button {
   font-size: .8em;
