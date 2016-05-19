@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My ToDo List</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-ng-app="todoApp">
+  <main data-ng-controller="TasksCtrl as tasksctrl">
+    <task-list
+      data-list-title="My Firefly To-Do List"
+      data-tasks="tasksctrl.fireflyTasks">
+      <img src="img/firefly.png" alt="Firefly">
+    </task-list>
+    <task-list
+      data-list-title="My Sword Art Online To-Do List"
+      data-tasks="tasksctrl.saoTasks">
+      <img src="img/sao.jpg" alt="Sword Art Online">
+    </task-list>
+  </main>
+  <script src="js/bundle.js"></script>
+</body>
+</html>

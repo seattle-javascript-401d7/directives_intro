@@ -1,0 +1,10 @@
+<section>
+  <h1>{{ listTitle }}</h1>
+  <ol>
+    <task-item
+      data-ng-repeat="task in tasks"
+      data-task="task">
+    </task-item>
+  </ol>
+  <ng-transclude></ng-transclude>
+</section>
