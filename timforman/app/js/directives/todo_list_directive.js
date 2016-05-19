@@ -3,10 +3,12 @@ module.exports = function(app) {
     return {
       restrict: 'EAC',
       replace: true,
+      transclude: true,
       templateUrl: 'templates/todo_list.html',
       scope: {
         todos: '=',
-        listTitle: '@'
+        listTitle: '@',
+        description: '@'
       },
       controller: function($scope) {
         this.completeTodo = function(todo) {

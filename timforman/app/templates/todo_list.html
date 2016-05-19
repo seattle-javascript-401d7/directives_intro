@@ -1,6 +1,10 @@
 <section>
   <h1>{{ listTitle }}</h1>
   <ul>
-    <todo-item data-ng-repeat="todo in todos" data-todo="todo"></todo-item>
+    <todo-item
+      data-ng-repeat="todo in todos"
+      data-todo="todo">
+      <ng-transclude></ng-transclude>
+    </todo-item>
   </ul>
 </section>

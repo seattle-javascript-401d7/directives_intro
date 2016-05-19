@@ -23,4 +23,13 @@ button {
 ul {
   list-style: none;
   background-color: #FFF;
+  border: solid 1px red;
+}
+
+li {
+  border-bottom: dotted 3px blue;
+}
+
+#edit-button {
+  margin-left: 80%;
 }
