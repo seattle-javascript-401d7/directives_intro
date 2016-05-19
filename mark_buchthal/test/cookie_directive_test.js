@@ -19,7 +19,7 @@ describe('cookie directive', () => {
 
   it('should create a cookie directive with controller binding', function() {
     $httpBackend.expectGET('templates/cookie_list.html').respond(200, cookieListTemplate);
-    $scope.cookieTitle = 'test cookieTitle';
+    $scope.cookieTitle = 'test';
     var link = $compile('<div data-cookie-title></div>');
     var directive = link($scope);
     $httpBackend.flush();

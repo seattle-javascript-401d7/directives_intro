@@ -5,12 +5,14 @@
   <title>Basic Directives</title>
 </head>
 <body data-ng-app="cookieApp">
-
-  <cookie-list
-    data-cookie-title="Cookies To Be Eaten"
-    data-cookies="cookies">
-  ></cookie-list>
-
+  <main data-ng-controller="CookieController as cookieCtrl">
+    <div data-cookie-list
+      data-cookie-title="Cookies To Be Eaten"
+      data-cookies="cookieCtrl.cookies">
+      <img src="../images/cookie.jpeg" alt="cookie monster">
+    </div data-cookie-list>
+  </main>
   <script src="bundle.js"></script>
 </body>
 </html>
+
