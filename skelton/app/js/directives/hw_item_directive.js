@@ -4,6 +4,8 @@ module.exports = function(app) {
       restrict: 'EAC',
       templateUrl: 'templates/hw_item.html',
       require: '^hwList',
+      transclude: true,
+      replace: true,
       scope: {
         hw: '='
       },

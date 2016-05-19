@@ -3,8 +3,8 @@ const hwTrack = angular.module('hwTrack', []);
 
 require('./directives')(hwTrack);
 
-hwTrack.run(['$rootScope', function($rs){
-  $rs.hws = [
+hwTrack.controller('hwController', function(){
+  this.hws = [
     {desc: 'finish directives assignment'},
     {desc: 'push directives assignment'},
     {desc: 'update first group project'},
@@ -12,4 +12,5 @@ hwTrack.run(['$rootScope', function($rs){
     {desc: 'update E2E testing with Protractor'},
     {desc: 'rebuild basicNG CRUD app'}
   ];
-}]);
+  this.description = 'Awesome description from hwController';
+});

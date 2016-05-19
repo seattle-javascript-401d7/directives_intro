@@ -5,11 +5,12 @@
     <title>Homework Tracker</title>
   </head>
   <body data-ng-app="hwTrack">
-    <hw-list
+    <main data-ng-controller="hwController as hwCtrl" >
+      <hw-list
       data-list-title="Assignments I need to complete"
-      data-hws="hws">
-    </hw-list>
-
+      data-hws="hwCtrl.hws">
+      </hw-list>
+    </main>
     <script src="bundle.js"></script>
   </body>
 </html>
