@@ -46,24 +46,16 @@
 
 	const angular = __webpack_require__(1);
 	const remodelApp = angular.module('remodelApp', []);
-	
 	__webpack_require__(3)(remodelApp);
 	
-	remodelApp.run(['$rootScope', function($rootscope) {
-	  $rootscope.works = [
-	    {description: 'put up shades in garage'},
-	    {description: 'move tools and equipment to garage'},
-	    {description: 'clean basement floor'},
-	    {description: 'stain basement floor'},
-	    {description: 'hire bathroom contractor'},
-	    {description: 'hire window contractor'},
-	    {description: 'finish bedroom framing'},
-	    {description: 'run wiring and install lighting'},
+	remodelApp.controller('WorksController', function() {
+	  this.works = [
 	    {description: 'install drywall'},
 	    {description: 'install doors'},
 	    {description: 'paint bedroom'}
 	  ];
-	}]);
+	  this.description = 'Description from controller';
+	});
 
 
 /***/ },
@@ -30967,6 +30959,8 @@
 	      restrict: 'EAC',
 	      templateUrl: 'templates/broken_down_works.html',
 	      require: '^listOfShitIGottaDo',
+	      transclude: true,
+	      replace: true,
 	      scope: {
 	        work: '='
 	      },
@@ -30987,9 +30981,11 @@
 	    return {
 	      restrict: 'EAC',
 	      replace: true,
+	      transclude: true,
 	      templateUrl: 'templates/list_of_shit_i_gotta_do.html',
 	      scope: {
 	        works: '=',
+	        description: '@',
 	        listTitle: '@'
 	      },
 	      controller: function($scope) {

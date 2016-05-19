@@ -4,6 +4,8 @@ module.exports = function(app) {
       restrict: 'EAC',
       templateUrl: 'templates/broken_down_works.html',
       require: '^listOfShitIGottaDo',
+      transclude: true,
+      replace: true,
       scope: {
         work: '='
       },
