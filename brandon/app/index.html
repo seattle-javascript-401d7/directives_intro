@@ -6,10 +6,15 @@
   </head>
   <h1>TASK LIST MAN</h1>
   <body data-ng-app="taskApp">
-    <task-list
-    data-list-title="Get these done!"
-    data-tasks="tasks"></task-list>
-
+    <main data-ng-controller="TaskController as taskCtrl">
+      <div data-task-list
+        data-list-title="Get these done!"
+        data-tasks="taskCtrl.tasks">
+        <p>
+          SOMETHING
+        </p>
+      </div>
+    </main>
     <script src="bundle.js"></script>
   </body>
 </html>

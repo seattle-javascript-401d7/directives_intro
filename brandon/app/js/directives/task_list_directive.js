@@ -3,6 +3,7 @@ module.exports = function(app) {
     return {
       restrict: 'EAC',
       replace: true,
+      transclude: true,
       templateUrl: 'templates/task_list.html',
       scope: {
         tasks: '=',

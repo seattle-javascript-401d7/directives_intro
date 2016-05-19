@@ -1,1 +1,4 @@
-<li>{{task.description}}<button data-ng-click="done(task)">COMPLETE THE MISSION</button></li>
+<li>{{task.description}}
+  <ng-transclude></ng-transclude>
+  <button data-ng-click="done(task)">COMPLETE THE MISSION</button>
+</li>
