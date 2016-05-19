@@ -39,3 +39,7 @@ Written by
 ## License
 
 The project is licensed under the terms of the MIT license.
+
+## Credits
+Image courtesy of http://i.imgur.com/PoSYCNp.jpg
+The tutorial for transclusion used was [this one](http://teropa.info/blog/2015/06/09/transclusion.html)
