@@ -4,6 +4,7 @@ module.exports = function(app) {
     return {
       restrict: 'EAC',
       replace: true,
+      transclude: true,
       templateUrl: 'templates/cookie_list.html',
       scope: {
         cookies: '=',

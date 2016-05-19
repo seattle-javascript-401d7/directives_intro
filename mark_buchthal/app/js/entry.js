@@ -4,10 +4,13 @@ const cookieApp = angular.module('cookieApp', []);
 
 require('./directives')(cookieApp);
 
-cookieApp.run(['$rootScope', function($rootScope) {
-  $rootScope.cookies = [
+
+cookieApp.controller('CookieController', function() {
+  this.cookies = [
       { name: 'macaron' },
       { name: 'chocolate chip' },
       { name: 'oatmeal' }
   ];
-}]);
+});
+
+

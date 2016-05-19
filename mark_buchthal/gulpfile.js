@@ -2,12 +2,21 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const webpack = require('webpack-stream');
 const nodemon = require('gulp-nodemon');
-const html = require('html-loader');
+const html = require('html-loader');  // eslint-disable-line
+const livereload = require('gulp-livereload');
 
 var files = {
   APPJS: ['app/**/*.js'],
   SERVERJS: ['server.js', 'gulpfile.js'],
-  TEST: 'test/**/*.js'
+  TEST: 'test/**/*.js',
+  INDEX: 'app/index.html'
+};
+
+var nodemonOptions = {
+  script: 'server.js',
+  ext: 'html css js',
+  ignore: ['build/'],
+  tasks: ['lint', 'build']
 };
 
 gulp.task('lint:browser', () => {
@@ -62,18 +71,23 @@ gulp.task('css:dev', () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('develop', () => {
-  nodemon({
-    script: 'server.js',
-    ext: 'html js css',
-    ignore: ['build'],
-    tasks: ['lint']
-  })
-  .on('restart', () => {
+gulp.task('images', () => {
+  gulp.src('app/images/**/*')
+    .pipe(gulp.dest('./build/images'));
+});
+
+gulp.task('default', () => {
+  livereload.listen();
+  nodemon(nodemonOptions).on('restart', () => {
+    gulp.src('server.js')
+      .pipe(livereload());
     console.log('restarted');
   });
 });
 
+gulp.task('watch', ['build'], () => {
+  gulp.watch([files.APPJS, files.INDEX, files.SERVERJS], ['build']);
+});
 
 gulp.task('lint', ['lint:browser', 'lint:server']);
-gulp.task('build', ['webpack:dev', 'static:dev', 'css:dev']);
+gulp.task('build', ['webpack:dev', 'static:dev', 'css:dev', 'images']);
