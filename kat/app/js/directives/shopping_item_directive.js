@@ -4,11 +4,13 @@ module.exports = function(app) {
       restrict: 'EAC',
       templateUrl: 'templates/shopping_item.html',
       require: '^shoppingList',
+      transclude: true,
       scope: {
         item: '='
       },
       link: function(scope, element, attrs, controller) {
         scope.done = controller.boughtItem;
+        // element.find('main').append(transclude());
       }
     };
   });

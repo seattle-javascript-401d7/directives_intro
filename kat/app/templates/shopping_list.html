@@ -1,6 +1,9 @@
 <section>
   <h1>{{listDate}}</h1>
-  <ul>
-    <shopping-item data-ng-repeat="item in items" data-item="item"></shopping-item>
-  </ul>
+  <ng-transclude></ng-transclude>
+  <ol>
+    <shopping-item data-ng-repeat="item in items" data-item="item">
+      <p>Used for the Mushroom Sauce</p>
+    </shopping-item>
+  </ol>
 </section>

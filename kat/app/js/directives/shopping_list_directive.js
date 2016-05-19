@@ -4,9 +4,11 @@ module.exports = (app) => {
       restrict: 'EAC',
       replace: true,
       templateUrl: 'templates/shopping_list.html',
+      transclude: true,
       scope: {
         items: '=',
         listDate: '@'
+        // recipeUsedFor: '@'
       },
       controller: function($scope) {
         this.boughtItem = function(item) {

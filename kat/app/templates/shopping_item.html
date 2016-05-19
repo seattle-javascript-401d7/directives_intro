@@ -1,1 +1,5 @@
-<li>{{item.name}}<button data-ng-click='done(item)'>Done</button></li>
+<li>{{item.name}}
+  <ng-transclude></ng-transclude>
+  <!-- {{item.recipeUsedFor}} -->
+  <button data-ng-click='done(item)'>Done</button>
+</li>
