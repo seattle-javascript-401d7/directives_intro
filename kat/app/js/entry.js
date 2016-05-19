@@ -2,9 +2,8 @@ const angular = require('angular');
 const shoppingApp = angular.module('shoppingApp', []);
 
 require('./directives')(shoppingApp);
-
-shoppingApp.run(['$rootScope', function($rs) {
-  $rs.items = [
+shoppingApp.controller('ListController', function() {
+  this.items = [
     { name: 'apples' },
     { name: 'chicken' },
     { name: 'toilet paper' },
@@ -13,4 +12,4 @@ shoppingApp.run(['$rootScope', function($rs) {
     { name: 'sangria' },
     { name: 'pina colada' }
   ];
-}]);
+});

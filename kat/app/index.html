@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body data-ng-app="shoppingApp">
-    <shopping-list
+    <main data-ng-controller="ListController as listCtrl">
+      <shopping-list
       data-list-date="May 18th 2016"
-      data-items="items"></shopping-list>
+      data-items="listCtrl.items"></shopping-list>
+    </main>
   <script src="bundle.js"></script>
   </body>
 </html>
