@@ -6,7 +6,7 @@ module.exports = function(app) {
         makes: '=',
         listTitle: '@'
       },
-      templateUrl: 'template/edit_task_list.html'
+      templateUrl: 'template/edit_make_list.html'
     };
   });
 };
