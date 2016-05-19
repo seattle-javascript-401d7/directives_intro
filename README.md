@@ -22,6 +22,6 @@ How to use
 
 In your browser, navigate to
 
-http://localhost:5050
+http://localhost:5000
 
 click the button and hope something happens
