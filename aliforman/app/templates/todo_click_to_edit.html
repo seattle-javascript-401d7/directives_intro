@@ -1,0 +1,12 @@
+<span>
+<span class="fields" ng-hide="view.editorEnabled">
+  {{todo}}
+  <button ng-click="enableEditor()">Edit</button>
+</span>
+<span ng-show="view.editorEnabled">
+  <input type="text" ng-model="view.editableValue">
+  <button ng-click="save()">Save</button>
+  or
+  <button ng-click="disableEditor()">Cancel</button>
+</span>
+</span>
