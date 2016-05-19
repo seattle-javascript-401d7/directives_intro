@@ -48,16 +48,15 @@
 	const grocApp = angular.module('grocApp', []);
 	
 	__webpack_require__(3)(grocApp);
-	
-	grocApp.run(['$rootScope', function($rs) {
-	  $rs.groceries = [
+	grocApp.controller('GroceriesController', function() {
+	  this.groceries = [
 	    { description: 'coffee' },
 	    { description: 'orange juice' },
 	    { description: 'bread' },
 	    { description: 'chicken' },
 	    { description: 'spinach' }
 	  ];
-	}]);
+	});
 
 
 /***/ },
@@ -30961,6 +30960,7 @@
 	      restrict: 'EAC',
 	      templateUrl: 'templates/grocery_item.html',
 	      require: '^groceryList',
+	      transclude: true,
 	      scope: {
 	        grocery: '='
 	      },
@@ -30981,6 +30981,7 @@
 	    return {
 	      restrict: 'EAC',
 	      replace: true,
+	      transclude: true,
 	      templateUrl: 'templates/grocery_list.html',
 	      scope: {
 	        groceries: '=',

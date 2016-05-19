@@ -4,6 +4,7 @@ module.exports = exports = function(app) {
       restrict: 'EAC',
       templateUrl: 'templates/grocery_item.html',
       require: '^groceryList',
+      transclude: true,
       scope: {
         grocery: '='
       },

@@ -5,9 +5,15 @@
   <title></title>
 </head>
 <body data-ng-app="grocApp">
-  <grocery-list
-    data-list-title="Groceries"
-    data-groceries="groceries"></grocery-list>
+  <main data-ng-controller="GroceriesController as groceryCtrl">
+    <grocery-list
+      data-list-title="Groceries"
+      data-groceries="groceryCtrl.groceries">
+      <p>
+         can be found at fred meyer:
+      </p>
+    </grocery-list>
+  </main>
 
   <script src="bundle.js"></script>
 </body>

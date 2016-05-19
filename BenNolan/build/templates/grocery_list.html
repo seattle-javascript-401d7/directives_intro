@@ -1,6 +1,10 @@
 <section>
   <h1>{{listTitle}}</h1>
   <ul>
-    <grocery-item data-ng-repeat="grocery in groceries" data-grocery="grocery"></grocery-item>
+    <grocery-item
+      data-ng-repeat="grocery in groceries"
+      data-grocery="grocery">
+      <ng-transclude></ng-transclude>
+    </grocery-item>
   </ul>
 </section>
