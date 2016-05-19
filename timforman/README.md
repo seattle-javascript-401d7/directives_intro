@@ -8,4 +8,5 @@ This should be pretty straight-forward to run.
 4. When gulp has completed type 'node server.js'.
 5. Open a browser and enter 'localhost:5000' in the address bar.
 6. You should be able to enter a new todo or edit an existing todo.
-7. Clicking on the 'Completed' button will remove the item from the list.  
+7. Use the 'Done' checkbox to keep track of your todos (transcluded element). 
+7. Clicking on the 'Remove Todo' button will remove the item from the list.  
