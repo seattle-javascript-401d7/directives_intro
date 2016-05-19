@@ -5,9 +5,9 @@ require('./directives')(demoApp);
 
 demoApp.run(['$rootScope', function($rs) {
   $rs.makes = [
-    {desc: 'find recipes'},
-    {desc: 'calculate quantity'},
-    {desc: 'grocery shop'},
-    {desc: 'begin food prep'}
+    { desc: 'find recipes' },
+    { desc: 'calculate quantity' },
+    { desc: 'grocery shop' },
+    { desc: 'begin food prep' }
   ];
 }]);

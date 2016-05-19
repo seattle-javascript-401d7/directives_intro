@@ -11,8 +11,8 @@ module.exports = function(app) {
       controller: function($scope) {
         this.completeMake = function(make) {
           $scope.makes.splice($scope.makes.indexOf(make), 1);
-        }
+        };
       }
-    }
+    };
   });
 };
