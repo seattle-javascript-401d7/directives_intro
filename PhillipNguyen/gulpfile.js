@@ -1,6 +1,18 @@
+'use strict';
 const gulp = require('gulp');
+const eslint = require('gulp-eslint');
 const webpack = require('webpack-stream');
 const html = require('html-loader');
+
+let files = ['test/**/*.js', 'static_server.js'];
+
+gulp.task('lint:test', () => {
+  return gulp.src(files)
+  .pipe(eslint({
+    'useEslintrc': true
+  }))
+  .pipe(eslint.format());
+});
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
@@ -43,4 +55,4 @@ gulp.task('css:dev', () => {
 });
 
 gulp.task('build:dev', ['webpack:dev', 'static:dev', 'css:dev']);
-gulp.task('default', ['build:dev']);
+gulp.task('default', ['build:dev', 'lint:test']);
