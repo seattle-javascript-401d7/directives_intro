@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  min-width: 320px;
+  max-width: 1040px;
+  font-family: "Helvetica", Serif;
+  font-size: 1.3em;
+  background: -webkit-linear-gradient(45deg,
+    rgba(125,185,232,1) 1%,
+    rgba(125,185,232,0.38) 61%,
+    rgba(30,87,153,0.31) 68%,
+    rgba(30,87,153,0.27) 72%,
+    rgba(30,87,153,0) 97%);
+  background: linear-gradient(45deg,
+    rgba(125,185,232,1) 1%,
+    rgba(125,185,232,0.38) 61%,
+    rgba(30,87,153,0.31) 68%,
+    rgba(30,87,153,0.27) 72%,
+    rgba(30,87,153,0) 97%);
+}
+button {
+  font-size: .8em;
+  background-color: #E0E0E0;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 10px;
+  border-color: solid 2px #000066;
+}
+.fields {
+  padding: 1% 1%;
+}
+li {
+  padding-left: 2%;
+  font-size: 1em;
+}
+input {
+  font-size: .8em;
+}
