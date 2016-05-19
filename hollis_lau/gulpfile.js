@@ -4,7 +4,7 @@ const webpack = require("webpack-stream");
 
 var lintClientFiles = ["app/**/*.js", "test/integration/**/*.js"];
 var lintServerFiles = ["gulpfile.js", "index.js", "server.js"];
-var staticFiles = ["app/**/*.html", "app/**/*.css"];
+var staticFiles = ["app/**/*.html", "app/**/*.css", "app/**/*.jpg", "app/**/*.png"];
 
 gulp.task("lintClient", () => {
   return gulp.src(lintClientFiles)

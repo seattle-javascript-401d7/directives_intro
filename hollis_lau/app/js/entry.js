@@ -4,9 +4,14 @@ const todoApp = angular.module("todoApp", []);
 require("./directives")(todoApp);
 
 todoApp.controller("TasksCtrl", function () {
-  this.tasks = [
-    { desc: "Re-submit broken assignments" },
-    { desc: "Get caught up on current assignments" },
-    { desc: "Get a metric fuck-ton of sleep" }
+  this.fireflyTasks = [
+    { desc: "Marathon Firefly over the weekend" },
+    { desc: "Watch Serenity" },
+    { desc: "Bemoan the stupidity of Fox for cancelling the best show ever" }
+  ];
+  this.saoTasks = [
+    { desc: "Marathon both seasons" },
+    { desc: "Watch the upcoming SAO movie" },
+    { desc: "Check ANN to see if more seasons are in the works" }
   ];
 });

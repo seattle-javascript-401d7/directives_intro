@@ -4,6 +4,7 @@ module.exports = function (app) {
       restrict: "EAC",
       templateUrl: "templates/task_list.html",
       replace: true,
+      transclude: true,
       scope: {
         tasks: "=",
         listTitle: "@"

@@ -5,4 +5,11 @@ body {
 
 h1 {
   text-align: center;
+  text-decoration: underline;
+}
+
+ol, img {
+  display: block;
+  width: 700px;
+  margin: 20px auto;
 }

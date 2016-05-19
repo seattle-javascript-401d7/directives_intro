@@ -8,8 +8,14 @@
 <body data-ng-app="todoApp">
   <main data-ng-controller="TasksCtrl as tasksctrl">
     <task-list
-      data-list-title="My To-Do List"
-      data-tasks="tasksctrl.tasks">
+      data-list-title="My Firefly To-Do List"
+      data-tasks="tasksctrl.fireflyTasks">
+      <img src="img/firefly.png" alt="Firefly">
+    </task-list>
+    <task-list
+      data-list-title="My Sword Art Online To-Do List"
+      data-tasks="tasksctrl.saoTasks">
+      <img src="img/sao.jpg" alt="Sword Art Online">
     </task-list>
   </main>
   <script src="js/bundle.js"></script>
