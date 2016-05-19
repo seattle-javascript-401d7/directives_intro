@@ -5,9 +5,12 @@
   <title>Document</title>
 </head>
 <body data-ng-app="taskApp">
-  <task-list
-    data-list-title="To do list"
-    data-tasks="tasks"></task-list>
+  <main data-ng-controller="TasksController as taskCtrl">
+    <task-list
+      data-list-title="To do list"
+      data-tasks="taskCtrl.tasks">
+    </task-list>
+  </main>
 <script src="./bundle.js"></script>
 </body>
 </html>
