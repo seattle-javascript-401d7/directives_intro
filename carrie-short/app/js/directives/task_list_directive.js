@@ -2,6 +2,7 @@ module.exports = function(app) {
   app.directive('taskList', function() {
     return {
       restrict: 'EAC',
+      transclude: true,
       replace: true,
       templateUrl: 'templates/task_list.html',
       scope: {
