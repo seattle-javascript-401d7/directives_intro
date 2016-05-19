@@ -1,7 +1,10 @@
 <section>
   <h1>{{listTitle}}</h1>
-  testing
   <ul>
-    <make-item data-ng-repeat="make in makes" data-make="make"></make-item>
+    <make-item
+      data-ng-repeat="make in makes"
+      data-make="make">
+      <ng-transclude></ng-transclude>
+    </make-item>
     </ul>
   </section>

@@ -6,10 +6,20 @@
   <link rel="stylesheets" href="css/style.css"></link>
 </head>
 <body data-ng-app="demoApp">
-  test
-  <data-make-list
+  <main data-ng-controller="MakesController as makeCtrl">
+  <div data-make-list
     data-list-title="Prep for Saturday's Job"
-    data-makes="makes"></data-make-list>
+    data-makes="makes.Ctrl.makes">
+  </div>
+</main>
+<div data-make-list
+  data-list-title="More To Do"
+  data-tasks="[{ desc: 'all the things' },
+  { desc: 'more things' }]">
+
+  <p>Find the dang crabcakes recipe!</p>
+  <a href='http://www.google.com'>Google can't find my recipe</a>
+</div>
 
     <script src="bundle.js"></script>
 

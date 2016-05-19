@@ -1,9 +1,11 @@
 module.exports = function(app) {
-  app.directive('make_Item', function() {
+  app.directive('makeItem', function() {
     return {
       restrict: 'EAC',
       templateUrl: 'templates/make_Item.html',
-      require: '^make_List',
+      require: '^makeList',
+      transclude: true,
+      replace: true,
       scope: {
         make: '='
       },
