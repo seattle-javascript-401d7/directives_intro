@@ -5,12 +5,12 @@ module.exports = function(app) {
       replace: true,
       templateUrl: 'templates/hw_list.html',
       scope: {
-        hwTask: '=',
+        hws: '=',
         listTitle: '@'
       },
       controller: function($scope) {
         this.completeHw = function(hw) {
-          $scope.hwTask.splice($scope.hwTask.indexOf(hw), 1);
+          $scope.hws.splice($scope.hws.indexOf(hw), 1);
         }
       }
     }
