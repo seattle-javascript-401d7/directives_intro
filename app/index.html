@@ -7,9 +7,10 @@
 <body data-ng-app="myApp">
 <h1>qfc</h1>
   <my-list data-list-title="Grocery List"
+
   data-tasks="tasks"> </my-list>
 
-  <div data-my-list data=list-title= "Another List" data-tasks=[{desc:'this thing'}]">
+  <div data-my-list data-list-title= "Another List" data-tasks="tasks.description"></div>
 
   <script src ="bundle.js"></script>
 

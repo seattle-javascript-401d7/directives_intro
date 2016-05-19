@@ -4,7 +4,7 @@ module.exports = function(app){
             restrict: 'EAC',
             templateUrl: 'templates/item.html',
             require:'^myList',
-            transclude: true,
+            transclude:true,
             replace:true,
             scope:{
                 task:'='
