@@ -9,8 +9,9 @@ module.exports = function(app) {
       scope: {
         hw: '='
       },
-      link: function(scope, element, attrs, controller) {
+      link: function(scope, element, attrs, controller, transclude) {
         scope.done = controller.completeHw;
+        el.find('.content').append(transclude());
       }
     }
   });
