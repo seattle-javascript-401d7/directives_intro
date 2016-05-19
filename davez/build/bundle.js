@@ -45,30 +45,17 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	const angular = __webpack_require__(1);
-	const demoApp = angular.module('demoApp', []);
+	const directiveApp = angular.module('directiveApp', []);
 	
-	demoApp.controller('DemoController', ['$scope', function($scope) {
-	  $scope.greeting = 'inside demo controller'
-	}]);
+	__webpack_require__(3)(directiveApp);
 	
-	demoApp.directive('cfDummyDirective', function() {
-	  return {
-	    restrict: 'AC',
-	    // template: '<h1>Hello From a directive</h1>'
-	    templateUrl: 'templates/dummy_directive.html',
-	    scope: {
-	      unicorns: '=',
-	      rainbows: '@'
-	    },
-	    controller: ['$scope', function($scope) {
-	      $scope.rainbows = $scope.rainbows || 'default';
-	      $scope.unicorns = $scope.unicorns || 'hello from default';
-	    }]
-	  };
-	});
-	
-	demoApp.run(['$rootScope', function($rs) {
-	  $rs.greeting = 'hello world';
+	directiveApp.run(['$rootScope', function($rs) {
+	  $rs.stuffs = [
+	    {desc: 'STA #1'},
+	    {desc: 'STA #2'},
+	    {desc: 'STA #3'},
+	    {desc: 'STA #4'}
+	  ];
 	}]);
 
 
@@ -30952,6 +30939,130 @@
 	})(window);
 	
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(app) {
+	  __webpack_require__(4)(app);
+	  __webpack_require__(5)(app);
+	  __webpack_require__(6)(app);
+	};
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+	  app.directive('dzStuffDirective', function() {
+	    return {
+	      restrict: 'EAC',
+	      templateUrl: 'templates/stuff_directive.html',
+	      scope: {
+	        stuffs: '=',
+	        lists: '@'
+	      },
+	      controller: ['scope', function($scope) {
+	        $scope.stuffs = $scope.stuffs;
+	        $scope.lists = $scope.lists;
+	      }]
+	    };
+	  });
+	}
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// module.exports = function(app) {
+	//   app.directive('stuffItem', function() {
+	//     return {
+	//       restrict: 'EAC',
+	//       templateUrl: 'templates/stuff_item.html',
+	//       require: '^stuffList',
+	//       scope: {
+	//         stuff: '='
+	//       },
+	//       link: function(scope, element, attrs, controller) {
+	//         scope.done = controller.completeStuff;
+	//       }
+	//     }
+	//   });
+	// };
+	
+	
+	module.exports = function(app) {
+	  app.directive('stuffItem', function() {
+	    return {
+	      restrict: 'EAC',
+	      templateUrl: 'templates/stuff_item.html',
+	      require: '^stuffList',
+	      scope: {
+	        stuff: '='
+	      },
+	      link: function(scope, element, attrs, controller) {
+	        scope.done = controller.completeStuff;
+	      }
+	    }
+	  });
+	  app.directive('clickToEdit', function() {
+	    return {
+	      restrict: 'A',
+	      replace: true,
+	      templateUrl: 'templates/edit.html',
+	      scope: {
+	        value: "=clickToEdit",
+	      },
+	      link: function(scope, element, attrs) {
+	        scope.view = {
+	          editableValue: scope.value,
+	          editorEnabled: false
+	        };
+	        scope.enableEditor = function() {
+	          scope.view.editorEnabled = true;
+	          scope.view.editableValue = scope.value;
+	        };
+	
+	        scope.disableEditor = function() {
+	          scope.view.editorEnabled = false;
+	        };
+	
+	        scope.save = function() {
+	          scope.value = scope.view.editableValue;
+	          scope.disableEditor();
+	        };
+	      }
+	    };
+	  });
+	};
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+	  app.directive('stuffList', function() {
+	    return {
+	      restrict: 'EAC',
+	      replace: true,
+	      templateUrl: 'templates/stuff_list.html',
+	      scope: {
+	        stuffs: '=',
+	        listTitle: '@'
+	      },
+	      controller: function($scope) {
+	        this.completeStuff = function(stuff) {
+	          $scope.stuffs.splice($scope.stuffs.indexOf(stuff), 1);
+	        }
+	      }
+	    }
+	  });
+	};
+
 
 /***/ }
 /******/ ]);

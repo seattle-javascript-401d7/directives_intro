@@ -1,40 +1,13 @@
 const angular = require('angular');
-const demoApp = angular.module('demoApp', []);
+const directiveApp = angular.module('directiveApp', []);
 
-require('./directives')(demoApp);
+require('./directives')(directiveApp);
 
-todoApp.run(['$rootScope', function($rs) {
-  $rs.checkList = [
-    { desc: 'task 1'},
-    { desc: 'task 2'},
-    { desc: 'task 3'}
+directiveApp.run(['$rootScope', function($rs) {
+  $rs.stuffs = [
+    {desc: 'STA #1'},
+    {desc: 'STA #2'},
+    {desc: 'STA #3'},
+    {desc: 'STA #4'}
   ];
 }]);
-
-
-// const angular = require('angular');
-// const demoApp = angular.module('demoApp', []);
-//
-// demoApp.controller('DemoController', ['$scope', function($scope) {
-//   $scope.greeting = 'inside demo controller'
-// }]);
-//
-// demoApp.directive('cfDummyDirective', function() {
-//   return {
-//     restrict: 'AC',
-//     // template: '<h1>Hello From a directive</h1>'
-//     templateUrl: 'templates/dummy_directive.html',
-//     scope: {
-//       unicorns: '=',
-//       rainbows: '@'
-//     },
-//     controller: ['$scope', function($scope) {
-//       $scope.rainbows = $scope.rainbows || 'default';
-//       $scope.unicorns = $scope.unicorns || 'hello from default';
-//     }]
-//   };
-// });
-//
-// demoApp.run(['$rootScope', function($rs) {
-//   $rs.greeting = 'hello world';
-// }]);

@@ -1,25 +1,21 @@
 {
-  "name": "davez",
+  "name": "directives-assignment",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node server.js"
-  },
-  "author": "dzknj@outlook.com",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "angular": "1.5.5",
-    "gulp": "3.9.1",
-    "html-loader": "0.4.3",
-    "webpack-stream": "3.2.0"
+    "angular": "^1.5.5",
+    "gulp": "^3.9.1",
+    "html-loader": "^0.4.3",
+    "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "express": "4.13.4"
+    "express": "^4.13.4"
   }
 }
-

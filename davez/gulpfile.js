@@ -19,7 +19,7 @@ gulp.task('static:dev', () => {
 });
 
 gulp.task('css:dev', () => {
-  gulp.src('app/css/**/*.css')
+  gulp.src('app/css/*.css')
   .pipe(gulp.dest('./build'));
 });
 
