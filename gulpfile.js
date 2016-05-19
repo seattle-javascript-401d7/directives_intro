@@ -1,6 +1,15 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
 const html = require('html-loader');
+const eslint = require('gulp-eslint');
+
+const scripts = ['server.js', 'gulpfile.js', 'app/**/*.js', 'app/**/*.css'];
+
+gulp.task('lint', () => {
+  return gulp.src(scripts)
+  .pipe(eslint())
+  .pipe(eslint.format());
+});
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')

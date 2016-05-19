@@ -7,6 +7,6 @@ module.exports = function(app) {
         listTitle: '@'
       },
       templateUrl: 'template/edit_task_list.html'
-    }
+    };
   });
 };
