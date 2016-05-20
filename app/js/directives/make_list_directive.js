@@ -7,7 +7,7 @@ module.exports = function(app) {
       templateUrl: 'templates/make_list.html',
       scope: {
         makes: '=',
-        listTitle: '@'
+        listTitle: '@',
         desc: '@'
       },
       controller: function($scope) {

@@ -13,6 +13,6 @@ module.exports = function(app) {
       link: function(scope, element, attrs, controller) {
         scope.done = controller.completeMake;
       }
-    }
+    };
   });
 };
