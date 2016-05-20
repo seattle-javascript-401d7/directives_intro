@@ -1,0 +1,27 @@
+html {
+  background-color: green;
+}
+
+body {
+  min-width: 720px;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+main {
+  margin-left: 25%;
+  max-width: 50%;
+}
+
+button {
+  border: solid 1px white;
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+  background-color: pink;
+}

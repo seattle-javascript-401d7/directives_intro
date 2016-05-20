@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catering Prep</title>
+  <link rel="stylesheets" href="css/style.css"></link>
+</head>
+<body data-ng-app="demoApp">
+  <main data-ng-controller="makesController as makeCtrl">
+  <div data-make-list
+    data-list-title="Prep for Saturday's Job"
+    data-makes="makeCtrl.makes">
+  </div>
+</main>
+
+<div data-make-list
+  data-list-title="More To Do"
+  data-makes="[{ desc: 'all the things' },
+  { desc: 'more things' }]">
+
+
+  <p>Find the dang crabcakes recipe!</p>
+  <a href='http://www.google.com'>Google can't find my recipe</a>
+</div>
+
+    <script src="bundle.js"></script>
+
+</body>
+</html>
