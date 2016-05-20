@@ -9,11 +9,12 @@ Install packages
 
 > npm install
 Build the files to run
-
+gulp:build dev
 In the terminal window, navigate to your project's home directory
 
-> gulp build:dev
+> gulp
 Start the server
+
 
 Once the build is complete, in your terminal type
 
@@ -22,6 +23,6 @@ How to use
 
 In your browser, navigate to
 
-http://localhost:5050
+http://localhost:5000
 
 click the button and hope something happens
