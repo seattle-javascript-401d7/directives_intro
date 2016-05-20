@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Homework Tracker</title>
+</head>
+
+<body data-ng-app="hwTrack">
+    <main data-ng-controller="hwController as hwCtrl">
+        <div data-hw-list data-list-title="Assignments I need to complete" data-hws="hwCtrl.hws">
+        </div>
+    </main>
+    <div data-hw-list
+          data-list-title="Occluded Transcluded"
+          data-hws="[
+          {desc: 'get transclusion to work'},
+          {desc: 'don\'t let Angular vampire my life away'}]">
+        <p>finally!</p>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

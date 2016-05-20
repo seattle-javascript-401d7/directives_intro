@@ -1,0 +1,10 @@
+<section>
+  <h1>{{listTitle}}</h1>
+  <ul>
+    <hw-item
+      data-ng-repeat="hw in hws"
+      data-hw="hw">
+      <ng-transclude></ng-transclude>
+    </hw-item>
+  </ul>
+</section>
