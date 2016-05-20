@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.directive('hwItem', function(){
+  app.directive('hwItem', function() {
     return {
       restrict: 'EAC',
       templateUrl: 'templates/hw_item.html',
@@ -9,9 +9,8 @@ module.exports = function(app) {
       scope: {
         hw: '='
       },
-      link: function(scope, element, attrs, controller, transclude) {
+      link: function(scope, element, attrs, controller) {
         scope.done = controller.completeHw;
-        el.find('.content').append(transclude());
       }
     }
   });
