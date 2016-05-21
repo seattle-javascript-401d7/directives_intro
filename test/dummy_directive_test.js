@@ -15,7 +15,6 @@ describe('dummy directive', function() {
     $scope = $rootScope.$new();
   }));
 
-
   it('should create a dummy directive with a controller binding', function() {
     $httpBackend.expectGET('templates/dummy_directive.html').respond(200, dummyTemplate);
 

@@ -7,8 +7,8 @@ module.exports = function(app) {
       templateUrl: 'templates/make_list.html',
       scope: {
         makes: '=',
-        listTitle: '@'
-        desc: '@'
+        listTitle: '@',
+        description: '@'
       },
       controller: function($scope) {
         this.completeMake = function(make) {

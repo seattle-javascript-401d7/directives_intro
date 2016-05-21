@@ -9,11 +9,12 @@ Install packages
 
 > npm install
 Build the files to run
-
+gulp:build dev
 In the terminal window, navigate to your project's home directory
 
-> gulp build:dev
+> gulp
 Start the server
+
 
 Once the build is complete, in your terminal type
 
