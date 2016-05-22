@@ -9,8 +9,9 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "heidi laursen",
   "license": "ISC",
+  
   "devDependencies": {
     "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",

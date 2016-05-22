@@ -13,7 +13,7 @@ gulp.task('webpack:dev', () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('webpack:test', () => {
+gulp.task('webpack:test', function() {
   return gulp.src('test/entry.js')
     .pipe(webpack({
       devtool: 'source-map',
@@ -29,7 +29,7 @@ gulp.task('webpack:test', () => {
         ]
       }
     }))
-    .pipe(gulp.dest('text/'));
+    .pipe(gulp.dest('test/'));
 });
 
 gulp.task('static:dev', () => {
@@ -37,6 +37,11 @@ gulp.task('static:dev', () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('build:dev', ['webpack:dev', 'static:dev']);
+gulp.task('css:dev', () => {
+  gulp.src('app/css/**/*.css')
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('build:dev', ['webpack:dev', 'static:dev', 'css:dev']);
 gulp.task('test', ['webpack:test']);
 gulp.task('default', ['build:dev']);
