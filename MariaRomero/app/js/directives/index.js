@@ -1,3 +1,4 @@
-module.exports = function(app) {
-  require('./listDirective')(app);
+module.exports = exports = function(app) {
+  require('./bookListDirective')(app);
+  require('./bookDirective')(app);
 };

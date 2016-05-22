@@ -5,9 +5,23 @@
     <!-- <link rel="styleshee" href="styles.css"> -->
     <title>Directives</title>
   </head>
-  <body data-ng-app="checklistApp">
-    <main data-mr-list-directive title="Assignments to Complete:"></main>
+  <body data-ng-app="bookSaleApp">
 
+    <main data-ng-controller="BookListController as bookctrl"
+          data-ng-init="bookctrl.showAllBooks()">
+
+      <section data-my-book-list data-title="Books on Sale">
+        <ul id="bookSaleList">
+        <div data-my-book data-ng-repeat="book in bookctrl.books"
+          data-book="book"
+          data-button-text="Add Book to Shopping Cart"
+          data-action="add">
+        </div>
+      </ul>
+      </section>
+
+
+    </main>
 
     <script src="./bundle.js"</script>
   </body>
