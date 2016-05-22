@@ -49,6 +49,11 @@
 	
 	__webpack_require__(3)(shoppingApp);
 	
+	shoppingApp.controller('DemoController', ['$scope', function($scope) {
+	  $scope.items = $scope.items || 'default';
+	  $scope.list = $scope.list || 'hello from default';
+	}]);
+	
 	shoppingApp.run(['$rootScope', function($rs) {
 	  $rs.items = [
 	    { name: 'apples' },
