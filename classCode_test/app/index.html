@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body data-ng-app="demoApp">
+    <main data-ng-controller="TasksController as taskCtrl">
+      <section data-task-list data-list-title="Thing I have to do after class" data-tasks="taskCtrl.tasks">
+        <p>Is this text going to show up?</p>
+
+      </section>
+
+      <section  data-task-list data-list-title="Another Awesome List" data-tasks="[{desc: 'write a better transclusion demo'}, {desc: 'test transclusion'}]">
+        <p>Here are some extra details</p>
+        <a href="https://docs.angularjs.org/api">Angular developer docs</a>
+      </section>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
+</html>
