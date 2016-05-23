@@ -4,8 +4,12 @@ module.exports = exports = function(app) {
       restrict: 'AC',
       require: '^ngController',
       templateUrl: '/templates/bookListTemplate.html',
+      transclude: true,
       scope: {
-        title: '@'
+        title: '@',
+        bookArray: '=',
+        buttonText: '@',
+        typeOfAction: '@'
       }
     };
   });

@@ -1,5 +1,12 @@
-<section>
-  <h1>{{title}}</h1>
-  <ul></ul>
 
-</section>
+  <h1>{{title}}</h1>
+  <ul>
+    <li
+      data-my-book
+      data-ng-repeat="book in bookArray"
+      data-book="book"
+      data-button-text="{{buttonText}}"
+      data-type-of-action="{{typeOfAction}}"
+      ></li>
+  </ul>
+  <ng-transclude></ng-transclude>

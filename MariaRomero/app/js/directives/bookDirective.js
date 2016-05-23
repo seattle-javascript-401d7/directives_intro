@@ -7,7 +7,10 @@ module.exports = exports = function(app) {
       scope: {
         book: '=',
         buttonText: '@',
-        action: '@'
+        typeOfAction: '@'
+      },
+      link: function(scope, element, attrs, controller) {
+        scope.action = controller[scope.typeOfAction];
       }
     };
   });
