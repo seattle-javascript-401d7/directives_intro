@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
-const html = require('html-loader');
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
