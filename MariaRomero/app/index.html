@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Directives</title>
+  </head>
+  <body data-ng-app="bookSaleApp">
+
+    <main data-ng-controller="BookListController as bookctrl"
+          data-ng-init="bookctrl.showAllBooks()">
+
+      <section data-my-book-list
+        data-book-array="bookctrl.books"
+        data-title="Books on Sale"
+        data-button-text="Add Book to Shopping Cart"
+        data-type-of-action="addToCart">
+        <button>Next Page</button>
+      </section>
+
+      <section data-my-book-list
+        data-book-array="bookctrl.shoppingCart"
+        data-title="Shopping Cart"
+        data-button-text="Remove from Cart"
+        data-type-of-action="removeFromCart">
+        <button>Checkout</button>
+      </section>
+
+    </main>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>
