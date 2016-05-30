@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.directive('brokenDownWorks', function() {
+  app.directive('brokenDownWorks', () => {
     return {
       restrict: 'EAC',
       templateUrl: 'templates/broken_down_works.html',
@@ -12,6 +12,6 @@ module.exports = function(app) {
       link: function(scope, element, attributes, controller) {
         scope.done = controller.workDone;
       }
-    }
+    };
   });
 };

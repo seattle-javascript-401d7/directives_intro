@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.directive('listOfShitIGottaDo', function() {
+  app.directive('listOfShitIGottaDo', () => {
     return {
       restrict: 'EAC',
       replace: true,
@@ -13,8 +13,8 @@ module.exports = function(app) {
       controller: function($scope) {
         this.workDone = function(work) {
           $scope.works.splice($scope.works.indexOf(work), 1);
-        }
+        };
       }
-    }
+    };
   });
 };

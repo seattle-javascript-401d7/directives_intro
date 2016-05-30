@@ -1,7 +1,13 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
-const html = require('html-loader');
 const eslint = require('gulp-eslint');
+var paths = {
+  scripts: [
+    __dirname + '/app/**/*.js',
+    __dirname + 'server.js',
+    __dirname + 'gulpfile.js'
+  ]
+};
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
@@ -14,7 +20,7 @@ gulp.task('webpack:dev', () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('webpack:test', function() {
+gulp.task('webpack:test', () => {
   return gulp.src('test/entry.js')
     .pipe(webpack({
       devtool: 'source-map',
@@ -40,7 +46,7 @@ gulp.task('static:dev', () => {
 
 gulp.task('lint', () => {
   return gulp
-  .src(['/app/**/*.js'])
+  .src(paths.scripts)
   .pipe(eslint())
   .pipe(eslint.format());
 });

@@ -30954,7 +30954,7 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
-	  app.directive('brokenDownWorks', function() {
+	  app.directive('brokenDownWorks', () => {
 	    return {
 	      restrict: 'EAC',
 	      templateUrl: 'templates/broken_down_works.html',
@@ -30967,7 +30967,7 @@
 	      link: function(scope, element, attributes, controller) {
 	        scope.done = controller.workDone;
 	      }
-	    }
+	    };
 	  });
 	};
 
@@ -30977,7 +30977,7 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
-	  app.directive('listOfShitIGottaDo', function() {
+	  app.directive('listOfShitIGottaDo', () => {
 	    return {
 	      restrict: 'EAC',
 	      replace: true,
@@ -30991,9 +30991,9 @@
 	      controller: function($scope) {
 	        this.workDone = function(work) {
 	          $scope.works.splice($scope.works.indexOf(work), 1);
-	        }
+	        };
 	      }
-	    }
+	    };
 	  });
 	};
 
