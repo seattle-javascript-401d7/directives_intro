@@ -4,8 +4,8 @@ const eslint = require('gulp-eslint');
 var paths = {
   scripts: [
     __dirname + '/app/**/*.js',
-    __dirname + 'server.js',
-    __dirname + 'gulpfile.js'
+    __dirname + '/server.js',
+    __dirname + '/gulpfile.js'
   ]
 };
 
