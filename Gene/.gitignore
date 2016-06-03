@@ -1,11 +1,11 @@
 .DS_Store
 .DS_Store?
-Gene/.DS_Store
-node_modules
-Gene/node_modules
+gene/.DS_Store
+node_modules/
+gene/node_modules/
 ._*
 .Spotlight-V100
 .Trashes
 db
-build
-Gene/build
+build/
+gene/build/
