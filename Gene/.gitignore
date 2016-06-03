@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+gene/.DS_Store
+node_modules/
+gene/node_modules/
+._*
+.Spotlight-V100
+.Trashes
+db
+build/
+gene/build/

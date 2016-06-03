@@ -1,0 +1,10 @@
+<section>
+  <h1>{{listTitle}}</h1>
+  <ul>
+    <broken-down-works
+     data-ng-repeat="work in works"
+     data-work="work">
+     <ng-transclude></ng-transclude>
+     </broken-down-works>
+  </ul>
+</section>
